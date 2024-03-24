@@ -1,4 +1,5 @@
 import datetime as dt 
+from time import strftime
 
 
 
@@ -26,9 +27,22 @@ def id(attendance):
     student_id = input("Enter ID: \n")
     attendance[student_id] = False
     if len(student_id) in range(9):
-        print(f"Student Id: {student_id} ")
+        print(f"Student Id: {student_id} \n")
     else:
         print("ID cannot be more than 8 numbers")
+
+
+
+
+
+def clockout(attendance):
+    print("press q to quit\n")
+    user_choice = input()
+    if user_choice == "q":
+        # print(dt.timedelta.min)
+        print("exiting application...")
+    
+        
 
 def main():
     attendance = {}
@@ -36,14 +50,13 @@ def main():
     while True:
         name(attendance)
         id(attendance)
-    
-    if attendance:
-        # print()
-        print("Attendance successfully recorded for today!")
-      
-
-       
-       
+        print("Attendance recorded successfully")
+        print(f"clocked-out at: {dt.time.strftime}")
+        clockout(attendance)
+        break
+        
+        
+        
 
 if __name__ =="__main__":
     main()

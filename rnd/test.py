@@ -24,3 +24,12 @@ def greet(course):
 greet("DCIT409")
 
 
+class Courses:
+    def __init__(self, course_code, name) -> None:
+
+        self.course_code = course_code
+        self.name = name
+
+Course = Courses("DCIT105", "Maths for IT Professionals")
+print(Course.course_code)
+
