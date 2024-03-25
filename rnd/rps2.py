@@ -19,9 +19,10 @@ def game():
         
     return "you lost!! :("
 
-print()
+# print()
+while True:
 
-print(game())
+    print(game())
     
 
     

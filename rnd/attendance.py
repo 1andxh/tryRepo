@@ -3,7 +3,7 @@ from time import strftime
 
 
 
-today = dt.date.today()
+today = dt.datetime.today()
 print("\nAttendance Sheet\n".ljust(60,'='))
 print("\nEnter your information below\n".ljust(60, '='))
 print(f"\nDate : {today}")
@@ -12,16 +12,17 @@ print(f"\nDate : {today}")
 def name(attendance):
     student_name = input(str("Enter name: "))
     attendance[student_name] = False
-    if len(student_name) > 4:
+    if len(student_name) > 3:
         attendance = []
-    print(f"{student_name}\n ")
-    # if student_name == " ":
-    #     print("Name cannot be left blank")
+    print(f"{student_name} \n")
+    # for char in student_name:
+    #     if student_name == " ":
+    #         print("Name cannot be left blank")
     # else:
-    #     print(student_name.upper)
-    # return student_name
+    # #     print(student_name.upper)
+    #     print(student_name)
 
-    # print(student_name.upper)
+    # # print(student_name.upper)
 
 def id(attendance):
     student_id = input("Enter ID: \n")
@@ -55,9 +56,6 @@ def main():
         clockout(attendance)
         break
         
-        
-        
-
 if __name__ =="__main__":
     main()
      
